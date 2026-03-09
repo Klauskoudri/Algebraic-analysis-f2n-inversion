@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdint.h>
+
+
 uint8_t gf_add(uint8_t a, uint8_t b) {
     return a ^ b;
 }
@@ -37,6 +41,23 @@ uint8_t gf_inv(uint8_t a) {
     return result;
 }
 
-main(
-    
-)
+
+int main() {
+    uint8_t a = 0x57; // Exemple de valeur (87 en décimal)
+    uint8_t b = 0x83; // Autre valeur (131 en décimal)
+    uint8_t c = 0x53; // 
+
+    // 1. Test de l'addition (XOR)
+    uint8_t sum = gf_add(a, b);
+    printf("Addition GF: %02x ^ %02x = %02x\n", a, b, sum);
+
+    // 2. Test de la multiplication
+    uint8_t prod = gf_mul(a, b);
+    printf("Multiplication GF: %02x * %02x = %02x\n", a, b, prod);
+
+    // 3. Test de l'inverse (La preuve par 9 de l'AES)  
+    uint8_t inv_c = gf_inv(c);
+
+    printf("Inverse de 53 est %02x \n", inv_c);
+    return 0;
+}
