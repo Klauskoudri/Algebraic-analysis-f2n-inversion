@@ -9,7 +9,7 @@
  * The AES S-Box is a composition of two operations:
  *   1. Multiplicative inversion in GF(2^8): a -> a^(-1)  (with 0 -> 0).
  *   2. Affine transformation over GF(2):    b -> Ab + c
- *      where A is the AES matrix and c = 0x63
+ *      where A is the AES matrix and c = 0x63.
  *
  * This construction ensures:
  *   - High nonlinearity (no affine approximation)
