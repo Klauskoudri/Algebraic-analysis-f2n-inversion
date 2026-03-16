@@ -7,7 +7,7 @@
  * Arithmetic over GF(2^8)
  * Irreducible polynomial: x^8 + x^4 + x^3 + x + 1 (0x11B — AES standard)
  *
- * Field elements are represented as uint8_t.
+ * Field elements are represented as uint8_t
  * Addition is bitwise XOR.
  * Multiplication is polynomial multiplication modulo the irreducible polynomial.
  */
