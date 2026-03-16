@@ -4,7 +4,7 @@
 
 /*
  * Affine transformation over GF(2)
- * Defined by the AES matrix A applied to the bits of x, then XOR with 0x63.
+ * Defined by the AES matrix A applied to the bits of x, then XOR with 0x63
  * Implemented via four cyclic rotations of x:
  *   y = x ^ rot(x,1) ^ rot(x,2) ^ rot(x,3) ^ rot(x,4) ^ 0x63
  */
